@@ -1,15 +1,250 @@
-<h1>Mi primer heading</h1>
-<p>Mi primera frase es mas largo ahora para poder <strong>hacer una prueba</strong>. Esto es para ver si baja la linea de texto.</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <!-- charset es la codificacion de la pagina -->
+     <meta name="viewport" content="width=device-width">
+     <!-- es para que la pagina se vea bien en dispositivos -->
+    <title>Curso HTML</title>
+    <!-- es para que el navegador pueda saber el titulo de la pagina -->
+    <meta name="robots" content="index, follow">
+    <!-- es para que el navegador pueda indexar la pagina -->
+    <meta name="theme-color" content="#09f">
+    <!-- es para que el navegador pueda cambiar el color de la barra de navegacion -->
+     <link rel="icon" type="image/jfif" href="img/Leon.jfif">
+     <!-- es para que el navegador pueda cambiar el icono de la pagina -->
+      <meta name="description" content="Pagina de animales para ver los lindos que son en la selva">
+      <!-- es para que el navegador pueda saber que es una pagina de animales -->
+       <!-- open graph -->
+        <meta property="og:title" content="Vista de animales en la selva">
+        <!-- es para que el navegador pueda saber el titulo de la pagina -->
+         <meta property="og:description" content="Pagina de animales para ver los lindos que son en la selva">
+         <!-- es para que el navegador pueda saber que es una pagina de animales -->
+          <meta property="og:image" content="img/Leon.jfif">
+          <!-- es para que el navegador pueda saber la imagen que usara -->
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Mi primer blog</h1>
+
+        <nav>
+         <a href="mailto: lucasandreszarachochavez@gmail.com">contactame aqui</a>
+         <br>
+         <a href="https://www.google.com/" target="_blank"
+         rel="noreferrer">Google</a>
+        </nav>
+    </header>
+
+    <video controls poster="img/Tirgre enojado.jfif" muted></video> 
+    <!-- es para que el navegador pueda reproducir el video -->
+
+    <!-- es para que el navegador pueda reproducir el audio -->
+    <br>
+    <br>
+    <audio controls></audio>
+
+    <dialog id="dialog">
+        <h1> es un dialogo para que el navegador pueda abrirlo</h1>
+            <p>Esto es para que el navegador pueda abrir un modal</p>
+        <button id="hide">Cerrar modal</button>
+    </dialog>
+
+    <br>
+    <br>
+    <button id="show">Abrir modal</button>
+
+    <br>
+    <script>
+        window.show.addEventListener("click", () => {
+            window.dialog.showModal() 
+        });
+        //es para que el navegador pueda abrir el dialogo
+
+        window.hide.addEventListener("click", () => {
+            window.dialog.close() 
+        });
+        //es para que el navegador pueda cerrar el dialogo
+        
+    </script>
+   
+    <main>
+   
+
+<p>Mi primera frase es mas largo ahora para poder <span style="color: blue;">hacer una prueba</span>. Esto es para ver si baja la linea de texto.</p>
 
 <h2>Mi segundo heading</h2>
 
 <ul>
-    <li>Elemento 1</li>
-    <li>Elemento 2</li>
-    <li>Elemento 3</li>
+    <li class="lista">Elemento 1</li>
+    <li class="lista">Elemento 1</li>
+    <li class="lista">Elemento 1</li>
 </ul>
+    <a download href="img/Leon.jfif">
+        <img src="img/Leon.jfif" 
+        id="Leon"
+        alt="Leon en la selva" 
+        title="Leon"
+        width="250" 
+        height="250">
+</a>
+<!-- el alt es la descripcion de la imagen -->
+<br>
+<br>
+<input type="text" placeholder="Ingresa tu nombre">
 
-<img src="img/Leon.jfif">
-<br>
-<br>
-<input type="text" value="Ingresa tu nombre">
+<h2 id="proyectos">Proyectos Realizados</h2>
+
+<!-- aside es para que el navegador pueda saber que es un elemento de navegacion -->
+<aside>
+    <header>
+        <h3>Proyectos</h3>
+    </header>
+    <ol type="1" start="10" reversed>
+        <li>Proyecto 1</li>
+        <li>Proyecto 2</li>
+        <li>Proyecto 3</li>
+    </ol>
+</aside>
+
+<section>
+    <article>
+        <header>
+            <h4>Proyectos1</h4>
+            <img loading="lazy" src="img/Tesla.png" alt="Pagina web de tesla" width="400" height="250"> 
+            <p>Pagina de tesla que hice desde cero</p>
+            <footer>
+                <small>Pagina de tesla: HTML, CSS, JS</small>
+            </footer>
+        </header>
+    </article>    
+</section>
+
+<section>
+    <article>
+        <header>
+            <h4>Proyectos2</h4>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed
+            /3nYLTiY5skU?si=bxRVX8NlYGEuB5g2" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+             gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+            </iframe> -->
+            <p>desarrrollo de tecnologia para la web y el desarrollo de aplicaciones.</p>
+            <footer>
+                <small>desarrrollo de tecnologia para la web: HTML, CSS, JS</small>
+            </footer>
+        </header>  
+    </article>     
+</section>
+
+<section>
+    <article>
+        <header>
+            <h4>Proyectos3</h4>
+            <p>desarrrollo de tecnologia para la web y el desarrollo de aplicaciones.</p>
+            <footer>
+                <small>desarrrollo de tecnologia para la web: HTML, CSS, JS</small>
+            </footer>
+        </header>
+    </article>
+</section>
+
+<section>
+    <h2>Preguntas frecuentes</h2>
+    <details open>
+        <summary>¿Que esrudiaste para este curso?</summary>
+        <p>Es un curso para que puedas aprender HTML, CSS y JS</p>
+    </details>
+    <details>
+        <summary>¿Que es HTML?</summary>
+        <p>Es un lenguaje de marcado de páginas web</p>
+    </details>
+    <details>
+        <summary>¿Que es CSS?</summary>
+        <p>Es un lenguaje de estilo de páginas web</p>
+    </details>
+    <details>
+        <summary>¿Que es JS?</summary>
+        <p>Es un lenguaje de programacion de páginas web</p>
+    </details>
+
+</section>
+
+<section>
+    <h2>Formulario de contacto</h2>
+    <form action="/" method="post">
+        <fieldset>
+            <legend>Informacion personal</legend>
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email" required>
+            </div>
+            <div>
+                <label for="fecha">Fecha de nacimiento:</label>
+                <input type="datetime-local" name="fecha" id="fecha" placeholder="Ingresa tu fecha de nacimiento" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion adicional</legend>
+            <div>
+                <label for="tel">telefono:</label>
+                <input type="tel" name="tel" id="tel" placeholder="Ingresa tu telefono" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+            <div>
+                <label for="why">¿por qué quieres contactarme?:</label>
+                <select name="why" id="why">
+                    <option value="1">Me gusta</option>
+                    <option value="2">Me interesa</option>
+                    <option value="3">Me llama la atención</option>
+                </select>
+            </div>
+            <div>
+                <label for="terms">¿Aceptas los términos y condiciones?:</label>
+                <input type="checkbox" name="terms" id="terms">
+            </div>
+            <div>
+                <datalist id ="lenguaje">
+                    <option value="Java Script"</option>
+                    <option value="CSS"</option>
+                    <option value="HTML"</option>
+                    <option value="React"</option> 
+                </datalist>
+                    <label>¿Que lenguaje de programacion te gusta?
+                    <input list="lenguaje" name="lenguaje">
+                </label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar Formulario</button>
+        
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <br>
+    copyright 2023 desarrrollo de tecnologia para la web
+    <nav>
+        <hr>
+        <a href="#titulo">volver al inicio</a>
+        <br>
+        <a href="#proyectos">Proyectos realizados</a>
+        <br>
+        <a href="mailto: lucasandreszarachochavez@gmail.com">contactame aqui</a>
+        <br>
+        <a href="tel:+5622222222">llamarme</a>
+    </nav>
+</footer>
+    
+</body>
+
+
+
+</html>
+
